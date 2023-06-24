@@ -19,10 +19,10 @@ def process_with_progress(chain, data, return_only_outputs=True):
     return result
 
 def run(query):
-    llm = OpenAI(model="gpt-3.5-turbo",batch_size=5,temperature=0)
+    llm = OpenAI(batch_size=5,temperature=0)
 
     # loading documents
-    loader = PyPDFLoader("yourfilename.pdf")
+    loader = PyPDFLoader("hwsweresume2023.pdf")
     pages = loader.load_and_split()
 
     faiss_index = FAISS.from_documents(pages, OpenAIEmbeddings())
