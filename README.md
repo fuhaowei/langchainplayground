@@ -26,6 +26,8 @@ List the key features of the project.
 
 Containerized. Run with the following command:
  \
+```docker build -t haoweilangchain .```
+\
 ```docker run -it -e "OPENAI_API_KEY=yoursecretkey" --rm haoweilangchain```
 
 
